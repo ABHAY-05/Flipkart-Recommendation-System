@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL:"https://flipkart-recommendation-api.onrender.com/api",
+  baseURL:"http://localhost:8000/api",
 });
 
 axiosInstance.interceptors.response.use(
