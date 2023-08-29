@@ -2,14 +2,14 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCPbKSqHpiWq9ZV18s68nyn13Mzdy4WoZQ",
-  authDomain: "flipkart-clone-ed674.firebaseapp.com",
-  projectId: "flipkart-clone-ed674",
-  storageBucket: "flipkart-clone-ed674.appspot.com",
-  messagingSenderId: "607967538673",
-  appId: "1:607967538673:web:a807c5732b1486ed132850",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_ID,
+  measurementId: process.env.MEASUREMENT_ID
 };
-
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

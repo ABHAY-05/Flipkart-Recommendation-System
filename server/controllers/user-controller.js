@@ -145,6 +145,7 @@ const logout = async (req, res) => {
 };
 const updateUserInfo = async (req, res) => {
   const { id, fname, lname, gender } = req.body;
+  console.log(id, fname, lname, gender);
   try {
     await User.updateOne({ _id: id }, { fname, lname, gender });
     res.status(200).json({
