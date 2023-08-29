@@ -24,6 +24,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const handleCookie = (auth_token) => {
+  const expirationDate = new Date();
+  expirationDate.setMonth(expirationDate.getMonth() + 1);
+
+  const expires = `expires=${expirationDate.toUTCString()}`;
+  document.cookie = `auth_token=${auth_token}; expires=${expires}; path=/`;
+};
+
 function OTPVerify({
   handleActions,
   phoneNumber,
@@ -79,6 +87,8 @@ function OTPVerify({
       const res = await axios.post("/accounts/login-with-phone", {
         phone: phoneNumber,
       });
+
+      await handleCookie(res.data.auth_token);
 
       const { isAuth, user } = await authentication();
       dispatch(setIsAuthenticate(isAuth));

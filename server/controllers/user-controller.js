@@ -7,11 +7,8 @@ const signup = async (req, res) => {
   try {
     const token = await user.generateAuthToken();
     await user.save();
-    res.cookie("auth_token", token, {
-      maxAge: 2629800000,
-      httpOnly: true,
-    });
-    res.status(201).json({ code: 201, isComplete: true });
+  
+    res.status(201).json({ code: 201, isComplete: true, auth_token: token });
   } catch (error) {
     console.log(error);
     res
@@ -37,16 +34,15 @@ const isExistPhone = async (req, res) => {
 
 const authentication = async (req, res) => {
   try {
-    const token = req.cookies.auth_token;
-    if (token) {
+    const tk = req.body.auth_token;
+    if (tk) {
+      const token = tk.split('=')[1];
       const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
-      console.log(verifyToken)
       const userInfo = await User.findOne(
         { _id: verifyToken._id, "tokens.token": token },
         { password: 0, tokens: 0 }
       );
 
-      //get Result
       const user = userInfo._doc;
 
       res.status(200).json({
@@ -78,19 +74,18 @@ const login = async (req, res) => {
   try {
     const { phone, password } = req.body;
     const userLogin = await User.findOne({ phone: phone });
+
     if (!userLogin) {
       return res
         .status(401)
         .json({ isLogin: false, message: "login/invalid-phone-or-password" });
     }
     let isMatch = await bcrypt.compare(password, userLogin.password);
+
     if (isMatch) {
       const token = await userLogin.generateAuthToken();
-      res.cookie("auth_token", token, {
-        maxAge: 2629800000,
-        httpOnly: true,
-      });
-      res.json({ isLogin: true, message: "User Login Successfully" });
+
+      res.json({ isLogin: true, message: "User Login Successfully", auth_token: token });
     } else {
       res
         .status(401)
@@ -110,11 +105,8 @@ const loginWithMobileNumber = async (req, res) => {
       return res.status(401).json({ isLogin: false });
     }
     const token = await userLogin.generateAuthToken();
-    res.cookie("auth_token", token, {
-      maxAge: 2629800000,
-      httpOnly: true,
-    });
-    res.json({ isLogin: true, message: "User Login Successfully" });
+
+    res.json({ isLogin: true, message: "User Login Successfully", auth_token: token });
   } catch (error) {
     res.status(500).json({ isLogin: false, error: error });
   }
@@ -122,18 +114,17 @@ const loginWithMobileNumber = async (req, res) => {
 
 const logout = async (req, res) => {
   try {
-    const token = req.cookies.auth_token;
-    if (token) {
+    const tk = req.body.auth_token;
+    if (tk) {
+      const token = tk.split('=')[1];
       const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
       const userInfo = await User.findOne({ _id: verifyToken._id });
 
-      //Delete token from database
       userInfo.tokens = userInfo.tokens.filter(
         (dbToken) => dbToken.token !== token
       );
 
       await userInfo.save();
-      res.clearCookie("auth_token", { path: "/" });
 
       res.status(200).json({
         code: 200,

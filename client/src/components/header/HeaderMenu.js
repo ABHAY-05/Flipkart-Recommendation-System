@@ -12,7 +12,6 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import {
   modalClose,
@@ -63,6 +62,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const deleteCookie = (cookieName) => {
+  console.log(cookieName);
+  document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
 function HeaderMenu() {
   const { popupLogin, isAuthenticate, isModalOpen } = useSelector(
     (state) => state.userReducer
@@ -88,9 +92,10 @@ function HeaderMenu() {
 
   const logout = async () => {
     try {
-      await axios.get("/accounts/logout", {
-        withCredentials: true,
+      await axios.post("/accounts/logout", {
+        auth_token: document.cookie
       });
+      deleteCookie("auth_token");
       dispatch(setUserInfo({}));
       dispatch(setIsAuthenticate(false));
       dispatch(clearCart());

@@ -2,8 +2,8 @@ import axios from "../adapters/axios";
 
 const authentication = async () => {
   try {
-    const { data } = await axios.get("/accounts/authentication", {
-      withCredentials: true,
+    const { data } = await axios.post("/accounts/authentication", {
+      auth_token: document.cookie
     });
     return {
       isAuth: data.isAuthenticate,

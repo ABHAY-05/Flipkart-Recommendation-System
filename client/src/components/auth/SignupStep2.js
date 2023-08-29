@@ -49,6 +49,15 @@ const useStyles = makeStyles((theme) => ({
     margin: "0px 10px",
   },
 }));
+
+const handleCookie = (auth_token) => {
+  const expirationDate = new Date();
+  expirationDate.setMonth(expirationDate.getMonth() + 1);
+
+  const expires = `expires=${expirationDate.toUTCString()}`;
+  document.cookie = `auth_token=${auth_token}; expires=${expires}; path=/`;
+};
+
 function SignupStep2() {
   const [showPassword, setShowPassword] = useState(false);
   const [values, setValues] = useState({
@@ -166,6 +175,7 @@ function SignupStep2() {
         password: values.password,
         phone: phoneNumber,
       });
+      await handleCookie(res.data.auth_token);
       const { isAuth, user } = await authentication();
       dispatch(setIsAuthenticate(isAuth));
       dispatch(setUserInfo(user));

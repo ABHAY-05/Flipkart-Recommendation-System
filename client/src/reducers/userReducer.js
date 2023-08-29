@@ -45,7 +45,7 @@ const userReducer = (state = initialState, action) => {
     case actionType.OPEN_MODAL:
       return { ...state, isModalOpen: true };
     
-      case actionType.CLOSE_MODAL:
+    case actionType.CLOSE_MODAL:
       return { ...state, isModalOpen: false };
 
     default:

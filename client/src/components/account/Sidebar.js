@@ -103,6 +103,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const deleteCookie = (cookieName) => {
+  console.log(cookieName);
+  document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
 export default function Sidebar() {
   const classes = useStyles();
   const dispatch = useDispatch();
@@ -117,9 +122,10 @@ export default function Sidebar() {
   };
   const logout = async () => {
     try {
-      await axios.get("/accounts/logout", {
-        withCredentials: true,
+      await axios.post("/accounts/logout", {
+        auth_token: document.cookie
       });
+      await deleteCookie('auth_token');
       dispatch(setUserInfo({}));
       dispatch(setIsAuthenticate(false));
       dispatch(clearCart());

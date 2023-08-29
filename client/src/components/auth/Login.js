@@ -34,7 +34,6 @@ import sendOtp from "../../utils/sendOTP";
 import OTPVerify from "./OTPVerify";
 import authentication from "../../adapters/authentication";
 
-
 const useStyles = makeStyles((theme) => ({
   inputs: {
     margin: "15px 0px",
@@ -64,12 +63,22 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 10px",
   },
 }));
+
+const handleCookie = (auth_token) => {
+  const expirationDate = new Date();
+  expirationDate.setMonth(expirationDate.getMonth() + 1);
+
+  const expires = `expires=${expirationDate.toUTCString()}`;
+  document.cookie = `auth_token=${auth_token}; expires=${expires}; path=/`;
+};
+
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [values, setValues] = useState({
     phone: "",
     password: "",
   });
+
   const [errors, setErrors] = useState({
     phone: false,
     password: false,
@@ -79,6 +88,7 @@ function Login() {
     phone: "",
     password: "",
   });
+
   const [loading, setLoading] = useState(false);
   const [requestBtnLoading, setRequestBtnLoading] = useState(false);
   const [submitCount, setSubmitCount] = useState(0);
@@ -180,7 +190,7 @@ function Login() {
     setLoading(true);
     try {
       const res = await axios.post("/accounts/check-phone", {
-        phone: values.phone,
+        phone: values.phone
       });
       const isRegistered = res.data.isExist;
       if (!isRegistered) {
@@ -191,6 +201,9 @@ function Login() {
           phone: values.phone,
           password: values.password,
         });
+
+        await handleCookie(data.auth_token);
+        
         const { isAuth, user } = await authentication();
         dispatch(setIsAuthenticate(isAuth));
         dispatch(setUserInfo(user));
@@ -210,7 +223,6 @@ function Login() {
     } catch (error) {
       setLoading(false);
       const { data } = error.response;
-      //console.log(data);
       if (data.message === "login/invalid-phone-or-password") {
         toastMessage("Invalid Mobile Number or Password.", "info");
       } else {
@@ -261,6 +273,7 @@ function Login() {
           dispatch(setMobileNumber(values.phone));
           setRequestBtnLoading(false);
           setIsLoginComponent(false);
+          handleCookie(res.data.auth_token);
         } else {
           setRequestBtnLoading(false);
           toastMessage(

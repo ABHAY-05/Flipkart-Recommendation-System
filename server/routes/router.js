@@ -49,7 +49,7 @@ const {
 const router = express.Router();
 
 router.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://flipkart-recommendation-system.netlify.app");
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
@@ -64,8 +64,8 @@ router.post("/accounts/signup", signup);
 router.post("/accounts/login", login);
 router.post("/accounts/login-with-phone", loginWithMobileNumber);
 router.post("/accounts/check-phone", isExistPhone);
-router.get("/accounts/authentication", authentication);
-router.get("/accounts/logout", logout);
+router.post("/accounts/authentication", authentication);
+router.post("/accounts/logout", logout);
 router.patch("/accounts/update-user-info", updateUserInfo);
 router.patch("/accounts/update-email", updateEmail);
 

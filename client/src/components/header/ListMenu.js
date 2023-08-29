@@ -46,6 +46,11 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
+const deleteCookie = (cookieName) => {
+  console.log(cookieName);
+  document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
 const ListMenu = ({ handleClose }) => {
   const classes = useStyle();
   const { isAuthenticate } = useSelector((state) => state.userReducer);
@@ -55,9 +60,10 @@ const ListMenu = ({ handleClose }) => {
 
   const logout = async () => {
     try {
-      await axios.get("/accounts/logout", {
-        withCredentials: true,
+      await axios.post("/accounts/logout", {
+        auth_token: document.cookie
       });
+      await deleteCookie("auth_token");
       dispatch(setUserInfo({}));
       dispatch(setIsAuthenticate(false));
       dispatch(clearCart());

@@ -9,7 +9,6 @@ import {
   ListItemText,
   Box,
   Typography,
-  Link,
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 
