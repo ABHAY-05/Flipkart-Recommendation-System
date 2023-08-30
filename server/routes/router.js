@@ -1,10 +1,13 @@
 const express = require("express");
+require('dotenv').config({ path: '../.env'});
+
 const {
   getProducts,
   getProductById,
   getProductsByCategory,
   getProductsBySubCategory
 } = require("../controllers/product-controller");
+
 const {
   addItem,
   removeItem,
@@ -49,7 +52,7 @@ const {
 const router = express.Router();
 
 router.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header("Access-Control-Allow-Origin", process.env.URL);
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"

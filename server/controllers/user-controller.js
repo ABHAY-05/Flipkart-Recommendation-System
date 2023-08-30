@@ -34,16 +34,15 @@ const isExistPhone = async (req, res) => {
 
 const authentication = async (req, res) => {
   try {
-    const tk = req.body.auth_token;
-    if (tk) {
-      const token = tk.split('=')[1];
+    const token = req.body.auth_token;
+    if (token) {
       const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
       const userInfo = await User.findOne(
         { _id: verifyToken._id, "tokens.token": token },
         { password: 0, tokens: 0 }
       );
 
-      const user = userInfo._doc;
+      const user = userInfo?._doc;
 
       res.status(200).json({
         code: 200,
@@ -114,9 +113,8 @@ const loginWithMobileNumber = async (req, res) => {
 
 const logout = async (req, res) => {
   try {
-    const tk = req.body.auth_token;
-    if (tk) {
-      const token = tk.split('=')[1];
+    const token = req.body.auth_token;
+    if (token) {
       const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
       const userInfo = await User.findOne({ _id: verifyToken._id });
 

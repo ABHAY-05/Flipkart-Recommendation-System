@@ -175,6 +175,7 @@ function SignupStep2() {
         password: values.password,
         phone: phoneNumber,
       });
+      console.table(res.data);
       await handleCookie(res.data.auth_token);
       const { isAuth, user } = await authentication();
       dispatch(setIsAuthenticate(isAuth));

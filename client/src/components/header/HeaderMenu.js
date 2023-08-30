@@ -65,7 +65,16 @@ const useStyles = makeStyles((theme) => ({
 const deleteCookie = (cookieName) => {
   console.log(cookieName);
   document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-}
+};
+
+const findToken = (tokenName) => {
+  var token = NaN;
+  document.cookie.split('; ').forEach(tk => {
+    const temp = tk.split('=');
+    if(temp[0] === tokenName) token = temp[1]
+  }) 
+  return token;
+};
 
 function HeaderMenu() {
   const { popupLogin, isAuthenticate, isModalOpen } = useSelector(
@@ -93,7 +102,7 @@ function HeaderMenu() {
   const logout = async () => {
     try {
       await axios.post("/accounts/logout", {
-        auth_token: document.cookie
+        auth_token: findToken('auth_token')
       });
       deleteCookie("auth_token");
       dispatch(setUserInfo({}));
