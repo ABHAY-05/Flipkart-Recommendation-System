@@ -121,12 +121,6 @@ export const featuredBrandLinks = {
   ],
 };
 
-export const sidePosterLink =
-  "https://rukminim1.flixcart.com/fk-p-flap/530/810/image/0b1acd4aba0c5c82.jpg?q=20";
-
-export const sidePosterLink2 = 
-  "https://rukminim1.flixcart.com/fk-p-flap/530/810/image/8270b79992f45f9d.jpg?q=20";
-
 export const maleAvatarUrl =
   "https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/profile-pic-male_4811a1.svg";
 

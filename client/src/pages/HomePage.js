@@ -9,7 +9,7 @@ import FeaturedBrandsRow from "../components/FeaturedBrandsRow";
 import ProductRow from "../components/product/ProductRow";
 import Footer from "../components/footer/Footer";
 
-import { featuredBrandLinks, posterLinks, sidePosterLink, sidePosterLink2  } from "../constants/data";
+import { featuredBrandLinks, posterLinks } from "../constants/data";
 import { RecommendationsRow } from '../components/recommendations/recommendations'
 
 import "../styles/HomePage.css";
@@ -36,7 +36,7 @@ function HomePage() {
         />
         <div style={{ padding: 1, backgroundColor: "#ffffff", cursor:"pointer" }}>
         <img
-          src={sidePosterLink2}
+          src="https://rukminim1.flixcart.com/fk-p-flap/530/810/image/8270b79992f45f9d.jpg?q=20"
           alt="Ads"
           className="ads_banner"
         />
@@ -54,7 +54,7 @@ function HomePage() {
         />
         <div style={{ padding: 1, backgroundColor: "#ffffff", cursor:"pointer" }}>
           <img
-            src={sidePosterLink}
+            src="https://rukminim1.flixcart.com/fk-p-flap/530/810/image/0b1acd4aba0c5c82.jpg?q=20"
             alt="Ads"
             className="ads_banner"
           />
