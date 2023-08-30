@@ -67,7 +67,7 @@ const useStyles = makeStyles({
   },
 });
 
-function ProductRow({ isFirstRow = false, categoryName, title }) {
+function ProductRow({  categoryName, title }) {
   useEffect(() => {
     getProductsByCategory(categoryName).then((data) => {
       if(categoryName === "top offers"){
@@ -103,21 +103,8 @@ function ProductRow({ isFirstRow = false, categoryName, title }) {
     },
   };
 
-  if (isFirstRow) {
-    responsive.superLargeDesktop.items = 6;
-    responsive.desktop.items = 4;
-    responsive.tablet.items=3;
-  }
-
   return (
-    <Box
-      className={classes.row_wrapper}
-      style={
-        isFirstRow
-          ? { width: "84.6%", paddingTop: 10, marginTop: 5, marginBottom: 0, minWidth:750 }
-          : {}
-      }
-    >
+    <Box className={classes.row_wrapper}>
       <Box className={classes.row_container}>
         <Box className={classes.leftContainer}>
           <h2 className={classes.row_title}>{title}</h2>
@@ -155,7 +142,7 @@ function ProductRow({ isFirstRow = false, categoryName, title }) {
                 <Box key={index}>
                   <Link to={`product/${product._id}`}>
                     <img
-                      className={`product_img ${isFirstRow && "reduce_margin"}`}
+                      className={`product_img`}
                       src={product.url}
                       alt="banner"
                     />

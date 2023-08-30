@@ -177,7 +177,6 @@ const RecommendationsRow = ({categoryName, title}) => {
   return (
     <Box
       className={classes.row_wrapper}
-      style={{ width: "84.6%", paddingTop: 10, marginTop: 5, marginBottom: 0, minWidth:750 }}
     >
       <Box className={classes.row_container}>
         <Box className={classes.leftContainer}>

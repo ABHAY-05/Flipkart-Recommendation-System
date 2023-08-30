@@ -34,31 +34,16 @@ function HomePage() {
           categoryName="recommended"
           subTitle="Recommended Items for you"
         />
-        <div style={{ padding: 1, backgroundColor: "#ffffff", cursor:"pointer" }}>
-        <img
-          src="https://rukminim1.flixcart.com/fk-p-flap/530/810/image/8270b79992f45f9d.jpg?q=20"
-          alt="Ads"
-          className="ads_banner"
-        />
-        </div>
       </div>
       <PosterRow
         imgUrls={posterLinks.links2}
       />
       <div className="first_productRow">
         <ProductRow
-          isFirstRow={true}
           categoryName="top offers"
           title="Top Offers"
           subTitle="Deals Refresh Every 24 Hours"
         />
-        <div style={{ padding: 1, backgroundColor: "#ffffff", cursor:"pointer" }}>
-          <img
-            src="https://rukminim1.flixcart.com/fk-p-flap/530/810/image/0b1acd4aba0c5c82.jpg?q=20"
-            alt="Ads"
-            className="ads_banner"
-          />
-        </div>
       </div>
       <PosterRow
         imgUrls={posterLinks.links3}
