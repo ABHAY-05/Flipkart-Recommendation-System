@@ -247,7 +247,7 @@ const products = [
             cost: 2199,
             discount: '60%'
         },
-        qty: 3,
+        qty: 1,
         rating: 4.6,
         discount: 'Extra 9% Off', 
         tagline: 'Deal of the Day',
@@ -267,7 +267,7 @@ const products = [
             cost: 2199,
             discount: '66%'
         },
-        qty: 3,
+        qty: 1,
         rating: 4.2,
         discount: 'Extra 79% Off', 
         tagline: 'Deal of the Day',
@@ -287,7 +287,7 @@ const products = [
             cost: 3949,
             discount: '56%'
         },
-        qty: 3,
+        qty: 1,
         rating: 4.1,
         discount: 'Extra Rs.80 Off', 
         tagline: 'Trending',
@@ -307,7 +307,7 @@ const products = [
             cost: 179,
             discount: '70%'
         },
-        qty: 3,
+        qty: 1,
         rating: 4.2,
         discount: 'Extra Rs.280 Off', 
         tagline: 'Trending',
@@ -327,7 +327,7 @@ const products = [
             cost: 454,
             discount: '31%'
         },
-        qty: 4,
+        qty: 1,
         rating: 3.9,
         discount: 'Extra 10% off', 
         tagline: 'Trending',
@@ -347,7 +347,7 @@ const products = [
             cost: 289,
             discount: '58%'
         },
-        qty: 10,
+        qty: 1,
         rating: 4.1,
         discount: 'Extra Rs.600 off', 
         subCategory: 'fitnesskit',
@@ -367,7 +367,7 @@ const products = [
             cost: 399,
             discount: '60%'
         },
-        qty: 9,
+        qty: 1,
         rating: 3.8,
         discount: 'Extra 10% Off', 
         subCategory: 'dumbell',
@@ -388,7 +388,7 @@ const products = [
             cost: 319,
             discount: '68%'
         },
-        qty: 9,
+        qty: 1,
         rating: 3.8,
         discount: 'Extra 10% Off', 
         subCategory: 'shirt',
@@ -409,7 +409,7 @@ const products = [
             cost: 1049,
             discount: '34%'
         },
-        qty: 7,
+        qty: 1,
         rating: 3.5,
         discount: 'Extra 6% off', 
         tagline: 'Hot Deal',
@@ -430,7 +430,7 @@ const products = [
             cost: 489,
             discount: '73%'
         },
-        qty: 3,
+        qty: 1,
         rating: 4,
         discount: 'Extra 3% off', 
         subCategory: 'shirt',
@@ -451,7 +451,7 @@ const products = [
             cost: 489,
             discount: '73%'
         },
-        qty: 3,
+        qty: 1,
         rating: 4,
         discount: 'Extra 4% off', 
         subCategory: 'shirt',
@@ -472,7 +472,7 @@ const products = [
             cost: 289,
             discount: '84%'
         },
-        qty: 4,
+        qty: 1,
         rating: 4,
         discount: 'Extra 2% off', 
         tagline: 'Special Prize',
@@ -493,7 +493,7 @@ const products = [
             cost: 289,
             discount: '84%'
         },
-        qty: 4,
+        qty: 1,
         rating: 4,
         discount: 'Extra 2% off', 
         tagline: 'Special Prize',
@@ -514,7 +514,7 @@ const products = [
             cost: 709,
             discount: '52%'
         },
-        qty: 4,
+        qty: 1,
         rating: 3.7,
         discount: 'Extra 10% off', 
         tagline: 'Special Prize',
@@ -536,7 +536,7 @@ const products = [
             cost: 709,
             discount: '52%'
         },
-        qty: 4,
+        qty: 1,
         rating: 3.7,
         discount: 'Extra 12% off', 
         tagline: 'Special Prize',
@@ -558,7 +558,7 @@ const products = [
             cost: 264,
             discount: '73%'
         },
-        qty: 4,
+        qty: 1,
         rating: 4.2,
         discount: 'Extra 5% off', 
         tagline: 'Special Prize',
@@ -580,7 +580,7 @@ const products = [
             cost: 382,
             discount: '61%'
         },
-        qty: 2,
+        qty: 1,
         rating: 4.2,
         discount: 'Extra 7% off', 
         tagline: 'Special Prize',
@@ -600,7 +600,7 @@ const products = [
             cost: 382,
             discount: '61%'
         },
-        qty: 2,
+        qty: 1,
         rating: 4.2,
         discount: 'Extra 10% off', 
         tagline: 'Special Prize',
@@ -623,7 +623,7 @@ const products = [
             cost: 5006,
             discount: '35%'
         },
-        qty: 2,
+        qty: 1,
         rating: 4.2,
         discount: 'Extra ₹264 off', 
         subCategory: 'fan',
@@ -645,7 +645,7 @@ const products = [
             cost: 9499,
             discount: '43%'
         },
-        qty: 3,
+        qty: 1,
         rating: 4.4,
         discount:'Extra ₹500 off' , 
         tagline: 'Hot Deal',
@@ -666,7 +666,7 @@ const products = [
             cost: 9499,
             discount: '32%'
         },
-        qty: 8,
+        qty: 1,
         rating: 4.4,
         discount:'Extra ₹500 off' , 
         tagline: 'Hot Deal',
@@ -688,7 +688,7 @@ const products = [
             cost: 6499,
             discount: '35%'
         },
-        qty: 8,
+        qty: 1,
         rating: 4.4,
         discount:'Extra ₹3500 off' , 
         tagline: 'Trending',
@@ -710,7 +710,7 @@ const products = [
             cost: 6999,
             discount: '30%'
         },
-        qty: 8,
+        qty: 1,
         rating: 4.1,
         discount:'Extra ₹3000 off' , 
         tagline: 'Trending',
@@ -732,7 +732,7 @@ const products = [
             cost: 13999,
             discount: '30%'
         },
-        qty: 8,
+        qty: 1,
         rating: 4.2,
         discount:'+ ₹49 Secured Packaging Fee' , 
         tagline: 'Trending',
@@ -754,7 +754,7 @@ const products = [
             cost: 14999,
             discount: '31%'
         },
-        qty: 3,
+        qty: 1,
         rating: 4.1,
         discount:'+ ₹49 Secured Packaging Fee' , 
         tagline: 'Trending',
@@ -776,7 +776,7 @@ const products = [
             cost: 8999,
             discount: '35%'
         },
-        qty: 3,
+        qty: 1,
         rating: 4.1,
         discount:'+ ₹49 Secured Packaging Fee' , 
         tagline: 'Trending',
@@ -798,7 +798,7 @@ const products = [
             cost: 14935,
             discount: '21%'
         },
-        qty: 3,
+        qty: 1,
         rating: 4.1,
         discount:'Extra ₹3564 off' , 
         tagline: 'Hot Deal',
@@ -820,7 +820,7 @@ const products = [
             cost: 10999,
             discount: '26%'
         },
-        qty: 5,
+        qty: 1,
         rating: 4.3,
         discount:'Extra ₹4000 off' , 
         tagline: 'Hot Deal',
@@ -990,7 +990,7 @@ const products = [
             cost: 342,
             discount: '57%'
         },
-        qty: 7,
+        qty: 1,
         discount: 'Extra 5% Off', 
         tagline: 'Hot Deal',
         category: 'gymEssentials',
@@ -1009,7 +1009,7 @@ const products = [
             cost: 299,
             discount: '78%'
         },
-        qty: 8,
+        qty: 1,
         discount: 'Extra 5% Off', 
         tagline: 'Hot Deal',
         category: 'gymEssentials',
@@ -1028,7 +1028,7 @@ const products = [
             cost: 747,
             discount: '66%'
         },
-        qty: 5,
+        qty: 1,
         discount: 'Extra 5% Off', 
         tagline: 'Trending',
         category: 'gymEssentials',
@@ -1048,7 +1048,7 @@ const products = [
             cost: 378,
             discount: '24%'
         },
-        qty: 6,
+        qty: 1,
         discount: 'Extra 2% Off', 
         tagline: 'Trending',
         category: 'gymEssentials',
@@ -1070,7 +1070,7 @@ const products = [
             cost: 947,
             discount: '50%'
         },
-        qty: 3,
+        qty: 1,
         discount: 'Extra 2% Off', 
         tagline: 'Trending',
         category: 'gymEssentials',
@@ -1091,7 +1091,7 @@ const products = [
             cost: 365,
             discount: '69%'
         },
-        qty: 4,
+        qty: 1,
         discount: 'Extra 2% Off', 
         tagline: 'Trending',
         category: 'gymEssentials',
@@ -1110,7 +1110,7 @@ const products = [
             cost: 269,
             discount: '66%'
         },
-        qty: 7,
+        qty: 1,
         discount: 'Extra 2% Off', 
         tagline: 'Hot Deal',
         category: 'gymEssentials',
@@ -1129,7 +1129,7 @@ const products = [
             cost: 499,
             discount: '66%'
         },
-        qty: 10,
+        qty: 1,
         discount: 'Extra 2% Off', 
         tagline: 'Hot Deal',
         category: 'gymEssentials',
@@ -1148,7 +1148,7 @@ const products = [
             cost: 10999,
             discount: '15%'
         },
-        qty: 10,
+        qty: 1,
         discount: 'Extra 6% Off', 
         tagline: 'Deal of the Day',
         category: 'mobile',
@@ -1167,7 +1167,7 @@ const products = [
             cost: 13999,
             discount: '15%'
         },
-        qty: 10,
+        qty: 1,
         discount: 'Extra 2000 Off', 
         tagline: 'Deal of the Day',
         category: 'mobile',
@@ -1186,7 +1186,7 @@ const products = [
             cost: 32999,
             discount: '15%'
         },
-        qty: 10,
+        qty: 1,
         discount: 'Extra 6000 Off', 
         tagline: 'Deal of the Day',
         category: 'mobile',
@@ -1206,7 +1206,7 @@ const products = [
             cost: 32999,
             discount: '15%'
         },
-        qty: 10,
+        qty: 1,
         discount: 'Extra 6000 Off', 
         tagline: 'Deal of the Day',
         category: 'mobile',
@@ -1225,7 +1225,7 @@ const products = [
             cost: 68999,
             discount: '13%'
         },
-        qty: 10,
+        qty: 1,
         discount: 'Extra 10901 Off', 
         tagline: 'Hot Deal',
         category: 'mobile',
@@ -1245,7 +1245,7 @@ const products = [
             cost: 68999,
             discount: '13%'
         },
-        qty: 10,
+        qty: 1,
         discount: 'Extra 10901 Off', 
         tagline: 'Hot Deal',
         category: 'mobile',
@@ -1264,7 +1264,7 @@ const products = [
         cost: 68999,
         discount: '13%'
     },
-    qty: 10,
+    qty: 1,
     discount: 'Extra 10901 Off', 
     subCategory: 'mobile',
     tagline: 'Hot Deal',
@@ -1284,7 +1284,7 @@ const products = [
         cost: 59999,
         discount: '15%'
     },
-    qty: 10,
+    qty: 1,
     discount: 'Extra 9901 Off', 
     subCategory: 'iphone',
     tagline: 'Hot Deal',
@@ -1837,7 +1837,7 @@ category: "sports"
         cost: 15990,
         discount: '46%'
     },
-    qty: 5,
+    qty: 1,
     discount: 'Extra 2% Off', 
     subCategory: 'chimney',
     tagline: 'Deal of the Day',
@@ -1857,7 +1857,7 @@ category: "sports"
         cost: 1599,
         discount: '66%'
     },
-    qty: 5,
+    qty: 1,
     discount: 'Extra 5% Off', 
     subCategory: 'weighingmachine',
     tagline: 'Deal of the Day',
@@ -1877,7 +1877,7 @@ category: "sports"
         cost: 10290,
         discount: '39%'
     },
-    qty: 5,
+    qty: 1,
     discount: 'Extra 5% Off', 
     subCategory: 'washingmachine',
     tagline: 'Deal of the Day',
@@ -1897,7 +1897,7 @@ category: "sports"
         cost: 429,
         discount: '52%'
     },
-    qty: 5,
+    qty: 1,
     discount: 'Extra 5% Off', 
     subCategory: 'dryiron',
     tagline: 'Deal of the Day',
@@ -1917,7 +1917,7 @@ category: "sports"
         cost: 4299,
         discount: '73%'
     },
-    qty: 5,
+    qty: 1,
     discount: 'Extra 5% Off', 
     subCategory: 'waterpurifier',
     tagline: 'Deal of the Day',
@@ -1937,7 +1937,7 @@ category: "sports"
             cost: 1849,
             discount: '19%'
         },
-        qty: 5,
+        qty: 1,
         discount: 'Extra 5% Off', 
         subCategory: 'bpmonitor',
         tagline: 'Deal of the Day',
@@ -1956,7 +1956,7 @@ category: "sports"
         cost: 8999,
         discount: '51%'
     },
-    qty: 10,
+    qty: 1,
     discount: '51% off', 
     tagline: 'Deal of the Day',
     category: 'electronics',
@@ -1975,7 +1975,7 @@ category: "sports"
         cost: 2455,
         discount: ' 68%'
     },
-    qty: 10,
+    qty: 1,
     discount: '67% off', 
     tagline: 'Deal of the Day',
     category: 'electronics',
@@ -1994,7 +1994,7 @@ category: "sports"
         cost: 1099,
         discount: '24%'
     },
-    qty: 10,
+    qty: 1,
     discount: '24% off', 
     tagline: 'Deal of the Day',
     category: 'electronics',
