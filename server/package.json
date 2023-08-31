@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "yarn install && cd client && yarn install && yarn build",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Abhay Verma",
   "engines": {
