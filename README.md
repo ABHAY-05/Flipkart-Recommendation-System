@@ -55,7 +55,7 @@ To get started with this project on your local machine, follow these steps:
    - Create a MongoDB database and configure the connection in the `.env` file on the server side with the DB name and put your connection String.
 
 5. Set up firebase on Client side:
-   - Configure the `.env` file and put these keys:
+   + Configure the `.env` file and put these keys:
      - `REACT_APP_API_KEY`
      - `REACT_APP_AUTH_DOMAIN`
      - `REACT_APP_PROJECT_ID`
