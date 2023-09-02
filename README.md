@@ -56,12 +56,12 @@ To get started with this project on your local machine, follow these steps:
 
 5. Set up firebase on Client side:
    - Configure the `.env` file and put these keys:
-     - REACT_APP_API_KEY
-     - REACT_APP_AUTH_DOMAIN
-     - REACT_APP_PROJECT_ID
-     - REACT_APP_STORAGE_BUCKET
-     - REACT_APP_MESSAGING_SENDER_ID
-     - REACT_APP_ID
+     - `REACT_APP_API_KEY`
+     - `REACT_APP_AUTH_DOMAIN`
+     - `REACT_APP_PROJECT_ID`
+     - `REACT_APP_STORAGE_BUCKET`
+     - `REACT_APP_MESSAGING_SENDER_ID`
+     - `REACT_APP_ID`
 
 7. Start the client and server servers:
    ```
