@@ -55,7 +55,7 @@ To get started with this project on your local machine, follow these steps:
    - Create a MongoDB database and configure the connection in the `.env` file on the server side with the DB name and put your connection String.
 
 5. Set up firebase on Client side:
-   + Configure the `.env` file and put these keys:
+   * Configure the `.env` file and put these keys:
      - `REACT_APP_API_KEY`
      - `REACT_APP_AUTH_DOMAIN`
      - `REACT_APP_PROJECT_ID`
@@ -89,6 +89,6 @@ If you'd like to contribute to this project, please follow these guidelines:
 
 If you encounter any issues or have suggestions for improvements, please create a GitHub issue [here](https://github.com/ABHAY-05/flipkart-recommendation-system/issues).
 
-Thank you for checking out the Flipkart Recommendation System project! We hope you find it useful and welcome your contributions.
+# Thank you for checking out the Flipkart Recommendation System project! We hope you find it useful and welcome your contributions.
 
-Happy coding! 🚀
+# Happy coding! 🚀
