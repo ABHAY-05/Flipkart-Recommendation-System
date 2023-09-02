@@ -89,6 +89,7 @@ If you'd like to contribute to this project, please follow these guidelines:
 
 If you encounter any issues or have suggestions for improvements, please create a GitHub issue [here](https://github.com/ABHAY-05/flipkart-recommendation-system/issues).
 
-# Thank you for checking out the Flipkart Recommendation System project! We hope you find it useful and welcome your contributions.
+---
+Thank you for checking out the Flipkart Recommendation System project! We hope you find it useful and welcome your contributions.
 
-# Happy coding! 🚀
+Happy coding! 🚀
