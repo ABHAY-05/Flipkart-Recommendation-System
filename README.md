@@ -1,6 +1,6 @@
-# Flipkart Recommendation System
+# Product Recommendation System
 
-Welcome to the Flipkart Recommendation System project! This repository contains the code for a full-stack recommendation system that provides personalized product recommendations based on user preferences. The project is built using JavaScript, React, Express.js, Mongoose, and CSS.
+Welcome to the Product Recommendation System project! This repository contains the code for a full-stack recommendation system that provides personalized product recommendations based on user preferences. The project is built using JavaScript, React, Express.js, Mongoose, and CSS.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -20,7 +20,7 @@ Welcome to the Flipkart Recommendation System project! This repository contains 
 - Utilizes Mongoose for data modeling, improving system accuracy and scalability.
 
 ### Live Site
-You can check out the live site of this project [here](https://flipkart-recommendation-system.vercel.app).
+You can check out the live site of this project [here](https://product-recommendation-system.vercel.app).
 
 ## Tech Stack
 
@@ -35,12 +35,12 @@ To get started with this project on your local machine, follow these steps:
 
 1. Clone this repository:
    ```
-   git clone https://github.com/ABHAY-05/flipkart-recommendation-system.git
+   git clone https://github.com/ABHAY-05/product-recommendation-system.git
    ```
 
 2. Navigate to the project directory:
    ```
-   cd flipkart-recommendation-system
+   cd product-recommendation-system
    ```
 
 3. Install the dependencies for both the client and server:
@@ -87,7 +87,7 @@ If you'd like to contribute to this project, please follow these guidelines:
 
 ## Issues
 
-If you encounter any issues or have suggestions for improvements, please create a GitHub issue [here](https://github.com/ABHAY-05/flipkart-recommendation-system/issues).
+If you encounter any issues or have suggestions for improvements, please create a GitHub issue [here](https://github.com/ABHAY-05/product-recommendation-system/issues).
 
 ---
 Thank you for checking out the Flipkart Recommendation System project! We hope you find it useful and welcome your contributions.
