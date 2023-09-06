@@ -20,7 +20,7 @@ Welcome to the Product Recommendation System project! This repository contains t
 - Utilizes Mongoose for data modeling, improving system accuracy and scalability.
 
 ### Live Site
-You can check out the live site of this project [here](https://product-recommendation-system.vercel.app).
+You can check out the live site of this project [here](https://myproduct-recommendation-system.vercel.app).
 
 ## Tech Stack
 
